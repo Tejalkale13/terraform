@@ -30,7 +30,7 @@ module "storage_alarms" {
 module "db_connection_alarm" {
   source               = "./modules/db_connection_alarms"
   rds_instances        = keys(data.aws_db_instance.db_info)
-  connection_threshold = 5
+  connection_threshold = 2
   # alarm_actions      = [aws_sns_topic.alerts.arn]
 }
 

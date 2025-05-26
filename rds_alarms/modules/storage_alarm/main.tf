@@ -6,7 +6,7 @@ resource "aws_cloudwatch_metric_alarm" "disk" {
   evaluation_periods  = 1
   metric_name         = "FreeStorageSpace"
   namespace           = "AWS/RDS"
-  period              = 300
+  period              = 120
   statistic           = "Average"
   threshold           = var.threshold
   alarm_description   = "RDS instance ${each.value} has low disk space"
